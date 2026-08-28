@@ -1,0 +1,98 @@
+enum OrderStatus {
+  PENDING
+  PAID
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+}
+
+model Order {
+      id String @id @default(uuid())
+
+      totalAmount Float @map("total_amount")
+      status OrderStatus @default(PENDING)
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Users
+      idUser String @map("id_user")
+      user User @relation(fields: [idUser], references: [id])
+
+      //Address
+      idAddress String? @unique @map("id_address")
+      address Address? @relation(fields: [idAddress], references: [id])
+
+      //Order Items
+      orderItems OrderItem[]
+
+      //Payment
+      payment Payment?
+
+      @@map("orders")
+}
+
+
+model OrderItem {
+      id String @id @default(uuid())
+
+      priceAtPurchase Float @map("price_at_purchase")
+      quantity Int @default(1)
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Orders
+      idOrder String @map("id_order")
+      order Order @relation(fields: [idOrder], references: [id], onDelete: Cascade)
+
+      //Bikes
+      idBike String @map("id_bike")
+      bike Bike @relation(fields: [idBike], references: [id])
+
+      @@map("order_items")
+}
+
+
+model Address {
+      id String @id @default(uuid())
+
+      country String
+      city String
+      street String
+      phone String
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Users
+      idUser String @map("id_user")
+      user User @relation(fields: [idUser], references: [id])
+
+      //Orders
+      order Order?
+
+      @@map("addresses")
+}
+
+model Payment {
+      id String @id @default(uuid())
+
+      idTransaction String? @unique @map("id_transaction")
+      status PaymentStatus @default(PENDING)
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Order
+      idOrder String @unique @map("id_order")
+      order Order @relation(fields: [idOrder], references: [id], onDelete: Cascade)
+
+      @@map("payment")
+}

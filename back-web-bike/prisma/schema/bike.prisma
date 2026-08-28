@@ -1,0 +1,123 @@
+model Bike {
+      id String @id @default(uuid())
+
+      name String
+      subtitle String?
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Cart Items
+      cartItems CartItem[]
+
+      //Bike Infos
+      bikeInfos BikeInfo[]
+
+      //Ratings
+      ratings Rating[]
+
+      //Comments
+      comments Comment[]
+
+      //Favorite List
+      favoriteLists FavoriteList[]
+
+      //Order Items
+      orderItems OrderItem[]
+
+      //Hero Banner
+      heroBanner HeroBanner[]
+
+      //Specification
+      specifications Specification[]
+
+      //File
+      idCoverFile String? @map("id_cover_file")
+      cover File? @relation("BikeCover", fields: [idCoverFile], references: [id])
+
+      images BikeImage[]
+
+      showcaseCard ShowcaseCard[]
+
+      @@map("bikes")
+}
+
+model BikeInfo {
+      id String @id @default(uuid())
+
+      description String
+      color String
+      colorHex String?
+      price Int
+      stock Int @default(0)
+      weight String?
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Bike
+      idBike String @map("id_bike")
+      bikes Bike @relation(fields: [idBike], references: [id])
+
+      //Brands
+      idBrand String @map("id_brand")
+      brands Brand @relation(fields: [idBrand], references: [id])
+
+      //Type
+      idType String @map("id_type")
+      types Type @relation(fields: [idType], references: [id])
+
+      @@map("bike_infos")
+}
+
+model BikeImage {
+      id String @id @default(uuid())
+
+      sortOrder Int @default(0) @map("sort_order")
+
+      //Bike
+      idBike String @map("id_bike")
+      bike Bike @relation(fields: [idBike], references: [id], onDelete: Cascade)
+
+      //File
+      idFile String @map("id_file")
+      file File @relation(fields: [idFile], references: [id])
+
+      @@unique([idBike, idFile])
+      @@map("bike_images")
+}
+
+model Type {
+      id String @id @default(uuid())
+
+      name String
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //File
+      idImageFile String? @unique @map("id_image_file")
+      image File? @relation(fields: [idImageFile], references: [id])
+
+      //Bike Infos
+      bikeInfos BikeInfo[]
+
+      @@map("types")
+}
+
+model Brand {
+      id String @id @default(uuid())
+      name String
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Bike Infos
+      bikeInfos BikeInfo[]
+
+      //File
+      idLogoFile String? @unique @map("id_logo_file")
+      logo File? @relation(fields: [idLogoFile], references: [id])
+
+      @@map("brands")
+}

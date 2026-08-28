@@ -1,0 +1,144 @@
+enum Role {
+      CUSTOMER
+      ADMIN
+      MANAGER
+}
+
+model User {
+      id String @id @default(uuid())
+
+      name String
+      surname String
+      email String @unique
+      password String
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Role
+      role Role @default(CUSTOMER)
+
+      //Cart
+      cart Cart?
+
+      //FavoriteList
+      favoriteLists FavoriteList[]
+
+      //Ratings
+      ratings Rating[]
+
+      //Comments
+      comments Comment[]
+
+      //Favorites Comments
+      favoriteComments FavoriteComment[]
+
+      //Orders
+      orders Order[]
+
+      //Addresses
+      addresses Address[]
+
+      //Notification
+      notifications Notification[]
+
+      //Refresh Tokens
+      refreshTokens RefreshToken[]
+
+      @@map("users")
+}
+
+model RefreshToken {
+      id String @id @default(uuid())
+
+      token String @unique
+      expiresAt DateTime @map("expires_at")
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Users
+      idUser String @map("id_user")
+      user User @relation(fields: [idUser], references: [id], onDelete: Cascade)
+
+      @@map("refresh_token")
+}
+
+
+model Cart {
+      id String @id @default(uuid())
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //User
+      idUser String @unique @map("id_user")
+      user User @relation(fields: [idUser], references: [id], onDelete: Cascade)
+
+      cartItems CartItem[]
+
+      @@map("carts")
+}
+
+model CartItem {
+      id String @id @default(uuid())
+
+      quantity Int @default(1)
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Cart
+      idCart String @map("id_cart")
+      cart Cart @relation(fields: [idCart], references: [id])
+
+      //Bike
+      idBike String @map("id_bike")
+      bikes Bike @relation(fields: [idBike], references: [id])
+
+      @@map("cart_item")
+
+}
+
+model FavoriteList {
+      id String @id @default(uuid())
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //User
+      idUser String @map("id_user")
+      users User @relation(fields: [idUser], references: [id])
+
+      //Bike
+      idBike String @map("id_bike")
+      bikes Bike @relation(fields: [idBike], references: [id])
+
+
+      @@map("favorite_lists")
+}
+
+model File {
+      id String @id @default(uuid())
+
+      fileName String @map("file_name")
+      contentType String @map("content_type")
+      sizeBytes Int @map("size_bytes")
+
+      url String
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Bikes
+      bikeCovers Bike[] @relation("BikeCover")
+      bikeImages BikeImage[]
+
+      //Brand
+      brand Brand?
+
+      //Type
+      type Type?
+
+      @@map("files")
+}

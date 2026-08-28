@@ -1,0 +1,70 @@
+model Comment {
+      id String @id @default(uuid())
+
+      inputComment String @map("input_comment")
+
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //User
+      idUser String @map("id_user")
+      users User @relation(fields: [idUser], references: [id])
+
+      //Bike
+      idBike String @map("id_bike")
+      bikes Bike @relation(fields: [idBike], references: [id])
+
+      //Bike Infos
+      idBikeInfo String @map("id_bike_info")
+
+      //Replies Comments
+      parentId String? @map("parent_id")
+      parentComments Comment? @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+      replies Comment[] @relation("CommentReplies")
+
+      //Favorite Comments
+      favoriteComments FavoriteComment[]
+
+      @@map("comments")
+}
+
+model FavoriteComment {
+      id String @id @default(uuid())
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //User
+      idUser String @map("id_user")
+      users User @relation(fields: [idUser], references: [id])
+
+      //Comment
+      idComment String @map("id_comment")
+      comments Comment @relation(fields: [idComment], references: [id])
+
+      @@unique([idUser, idComment])
+      @@map("favorites_comments")
+}
+
+
+model Rating {
+      id String @id @default(uuid())
+
+      grade Int @default(0)
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //User
+      idUser String @map("id_user")
+      users User @relation(fields: [idUser], references: [id])
+
+      //Bike
+      idBike String @map("id_bike")
+      bikes Bike @relation(fields: [idBike], references: [id])
+
+
+      @@unique([idUser, idBike])
+      @@map("ratings")
+}

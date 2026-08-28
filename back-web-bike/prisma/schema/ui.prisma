@@ -1,0 +1,46 @@
+model HeroBanner {
+      id String @id @default(uuid())
+
+      title String
+      subtitle String?
+      isActive Boolean @default(true) @map("is_active") // On/Off Banner
+      order Int @default(0) // For sorting slide, if it be slider
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      //Bike
+      idBike String @map("id_bike")
+      bike Bike @relation(fields: [idBike], references: [id])
+
+      @@map("hero_banner")
+}
+
+model Specification {
+      id String @id @default(uuid())
+
+      title String //Top Speed, Power...
+      value String //165, 232...
+      unit String // "MPH", "HP", "N·M"
+
+      idBike String @map("id_bike")
+      bike Bike @relation(fields: [idBike], references: [id])
+
+      @@map("specification")
+}
+
+model ShowcaseCard {
+      id String @id @default(uuid())
+
+      order Int @default(0)
+      isActive Boolean @default(true) @map("is_active")
+
+
+      createAt DateTime @default(now()) @map("created_at")
+      updateAt DateTime @updatedAt @map("updated_at")
+
+      idBike String @map("id_bike")
+      bike Bike @relation(fields: [idBike], references: [id])
+
+      @@map("showcase_card")
+}
