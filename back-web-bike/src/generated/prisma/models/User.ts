@@ -297,7 +297,7 @@ export type UserCreateInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
@@ -305,7 +305,7 @@ export type UserCreateInput = {
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateInput = {
@@ -317,7 +317,7 @@ export type UserUncheckedCreateInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
@@ -325,7 +325,7 @@ export type UserUncheckedCreateInput = {
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserUpdateInput = {
@@ -337,7 +337,7 @@ export type UserUpdateInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
@@ -345,7 +345,7 @@ export type UserUpdateInput = {
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateInput = {
@@ -357,7 +357,7 @@ export type UserUncheckedUpdateInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
@@ -365,7 +365,7 @@ export type UserUncheckedUpdateInput = {
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateManyInput = {
@@ -578,14 +578,14 @@ export type UserCreateWithoutNotificationsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutNotificationsInput = {
@@ -597,14 +597,14 @@ export type UserUncheckedCreateWithoutNotificationsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutNotificationsInput = {
@@ -632,14 +632,14 @@ export type UserUpdateWithoutNotificationsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutNotificationsInput = {
@@ -651,14 +651,14 @@ export type UserUncheckedUpdateWithoutNotificationsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutOrdersInput = {
@@ -670,14 +670,14 @@ export type UserCreateWithoutOrdersInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentCreateNestedManyWithoutUsersInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutOrdersInput = {
@@ -689,14 +689,14 @@ export type UserUncheckedCreateWithoutOrdersInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedCreateNestedManyWithoutUsersInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutOrdersInput = {
@@ -724,14 +724,14 @@ export type UserUpdateWithoutOrdersInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUpdateManyWithoutUsersNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutOrdersInput = {
@@ -743,14 +743,14 @@ export type UserUncheckedUpdateWithoutOrdersInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedUpdateManyWithoutUsersNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutAddressesInput = {
@@ -762,14 +762,14 @@ export type UserCreateWithoutAddressesInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutAddressesInput = {
@@ -781,14 +781,14 @@ export type UserUncheckedCreateWithoutAddressesInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutAddressesInput = {
@@ -816,14 +816,14 @@ export type UserUpdateWithoutAddressesInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutAddressesInput = {
@@ -835,14 +835,14 @@ export type UserUncheckedUpdateWithoutAddressesInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutCommentsInput = {
@@ -854,14 +854,14 @@ export type UserCreateWithoutCommentsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutCommentsInput = {
@@ -873,14 +873,14 @@ export type UserUncheckedCreateWithoutCommentsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutCommentsInput = {
@@ -908,14 +908,14 @@ export type UserUpdateWithoutCommentsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutCommentsInput = {
@@ -927,14 +927,14 @@ export type UserUncheckedUpdateWithoutCommentsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutFavoriteCommentsInput = {
@@ -946,14 +946,14 @@ export type UserCreateWithoutFavoriteCommentsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutFavoriteCommentsInput = {
@@ -965,14 +965,14 @@ export type UserUncheckedCreateWithoutFavoriteCommentsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutFavoriteCommentsInput = {
@@ -1000,14 +1000,14 @@ export type UserUpdateWithoutFavoriteCommentsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutFavoriteCommentsInput = {
@@ -1019,14 +1019,14 @@ export type UserUncheckedUpdateWithoutFavoriteCommentsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutRatingsInput = {
@@ -1038,14 +1038,14 @@ export type UserCreateWithoutRatingsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutRatingsInput = {
@@ -1057,14 +1057,14 @@ export type UserUncheckedCreateWithoutRatingsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutRatingsInput = {
@@ -1092,14 +1092,14 @@ export type UserUpdateWithoutRatingsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutRatingsInput = {
@@ -1111,14 +1111,14 @@ export type UserUncheckedUpdateWithoutRatingsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutRefreshTokensInput = {
@@ -1130,7 +1130,7 @@ export type UserCreateWithoutRefreshTokensInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
@@ -1149,7 +1149,7 @@ export type UserUncheckedCreateWithoutRefreshTokensInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   favoriteLists?: Prisma.FavoriteListUncheckedCreateNestedManyWithoutUsersInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
@@ -1184,7 +1184,7 @@ export type UserUpdateWithoutRefreshTokensInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
@@ -1203,7 +1203,7 @@ export type UserUncheckedUpdateWithoutRefreshTokensInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   favoriteLists?: Prisma.FavoriteListUncheckedUpdateManyWithoutUsersNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
@@ -1229,7 +1229,7 @@ export type UserCreateWithoutCartInput = {
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutCartInput = {
@@ -1248,7 +1248,7 @@ export type UserUncheckedCreateWithoutCartInput = {
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutCartInput = {
@@ -1283,7 +1283,7 @@ export type UserUpdateWithoutCartInput = {
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutCartInput = {
@@ -1302,7 +1302,7 @@ export type UserUncheckedUpdateWithoutCartInput = {
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutFavoriteListsInput = {
@@ -1314,14 +1314,14 @@ export type UserCreateWithoutFavoriteListsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartCreateNestedOneWithoutUserInput
   ratings?: Prisma.RatingCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutFavoriteListsInput = {
@@ -1333,14 +1333,14 @@ export type UserUncheckedCreateWithoutFavoriteListsInput = {
   createAt?: Date | string
   updateAt?: Date | string
   role?: $Enums.Role
-  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUsersInput
+  cart?: Prisma.CartUncheckedCreateNestedOneWithoutUserInput
   ratings?: Prisma.RatingUncheckedCreateNestedManyWithoutUsersInput
   comments?: Prisma.CommentUncheckedCreateNestedManyWithoutUsersInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedCreateNestedManyWithoutUsersInput
   orders?: Prisma.OrderUncheckedCreateNestedManyWithoutUserInput
   addresses?: Prisma.AddressUncheckedCreateNestedManyWithoutUserInput
   notifications?: Prisma.NotificationUncheckedCreateNestedManyWithoutUsersInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUsersInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutFavoriteListsInput = {
@@ -1368,14 +1368,14 @@ export type UserUpdateWithoutFavoriteListsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUpdateOneWithoutUserNestedInput
   ratings?: Prisma.RatingUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutFavoriteListsInput = {
@@ -1387,14 +1387,14 @@ export type UserUncheckedUpdateWithoutFavoriteListsInput = {
   createAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  cart?: Prisma.CartUncheckedUpdateOneWithoutUsersNestedInput
+  cart?: Prisma.CartUncheckedUpdateOneWithoutUserNestedInput
   ratings?: Prisma.RatingUncheckedUpdateManyWithoutUsersNestedInput
   comments?: Prisma.CommentUncheckedUpdateManyWithoutUsersNestedInput
   favoriteComments?: Prisma.FavoriteCommentUncheckedUpdateManyWithoutUsersNestedInput
   orders?: Prisma.OrderUncheckedUpdateManyWithoutUserNestedInput
   addresses?: Prisma.AddressUncheckedUpdateManyWithoutUserNestedInput
   notifications?: Prisma.NotificationUncheckedUpdateManyWithoutUsersNestedInput
-  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUsersNestedInput
+  refreshTokens?: Prisma.RefreshTokenUncheckedUpdateManyWithoutUserNestedInput
 }
 
 
