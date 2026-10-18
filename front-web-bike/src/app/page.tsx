@@ -1,4 +1,4 @@
-import Introduction from "./Introduction/page";
+import Introduction from "./introduction/page";
 
 export default function Home() {
   return (

@@ -6,7 +6,7 @@ export const bikesSeed: BikeModel[] = [
     name: "Montblanc Apex",
     category: "Sport",
     price: 350,
-    image: "/Lineup/apex.png",
+    image: "/Introduction/CardLineup/terra.svg",
     specs: {
       transmission: "Manual",
       fuel: "Gasoline",
@@ -18,7 +18,7 @@ export const bikesSeed: BikeModel[] = [
     name: "Montblanc Neon Racer",
     category: "Electric",
     price: 450,
-    image: "/Lineup/neon.png",
+    image: "/Introduction/CardLineup/terra.svg",
     specs: {
       transmission: "Automat",
       fuel: "Electric",
@@ -30,7 +30,7 @@ export const bikesSeed: BikeModel[] = [
     name: "Montblanc Terra GT",
     category: "Adventure",
     price: 280,
-    image: "/Lineup/terra.png",
+    image: "/Introduction/CardLineup/terra.svg",
     specs: {
       transmission: "Manual",
       fuel: "Gasoline",
@@ -42,11 +42,20 @@ export const bikesSeed: BikeModel[] = [
     name: "Montblanc Void Concept",
     category: "Electric",
     price: 600,
-    image: "/Lineup/void.png",
+    image: "/Introduction/CardLineup/terra.svg",
     specs: {
       transmission: "Automat",
       fuel: "Electric",
       cooling: "Air",
     },
   },
+];
+
+export const EQUIPMENT_LIST = [
+  "ABS System",
+  "Traction Control",
+  "Air Suspension",
+  "Cruise Control",
+  "Quickshifter",
+  "AI Dashboard",
 ];

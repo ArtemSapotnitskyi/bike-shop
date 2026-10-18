@@ -10,3 +10,15 @@ export interface BikeModel {
     cooling: "Air" | "Liquid";
   };
 }
+
+export interface RentalCardProps {
+  bike: BikeModel;
+}
+
+export const CATEGORIES = [
+  "All Models",
+  "Sport",
+  "Cruiser",
+  "Electric",
+  "Adventure",
+];
